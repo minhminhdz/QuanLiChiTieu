@@ -53,5 +53,37 @@ namespace QuanLiChiTieu
         {
             
         }
+
+        private void btnThongtin_Click(object sender, EventArgs e)
+        {
+            string email = txtEmail.Text.Trim();
+
+            // Kiểm tra xem email có được nhập hay không
+            if (string.IsNullOrEmpty(email))
+            {
+                MessageBox.Show("Vui lòng nhập email.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Tìm kiếm thông tin người dùng dựa trên email
+            using (var context = new SchoolDBEntities())
+            {
+                var user = context.Users.FirstOrDefault(u => u.Email == email);
+
+                if (user != null)
+                {
+                    // Hiển thị thông tin người dùng
+                    txtHoTen.Text = user.HoTen;
+                    txtGioiTinh.Text = user.GioiTinh;
+                    txtNgaySinh.Text = user.NgaySinh.ToString("dd/MM/yyyy"); // Định dạng ngày tháng
+                    txtDiaChi.Text = user.DiaChi;
+                    txtPass.Text = user.Password; // Nếu bạn không muốn hiện mật khẩu, hãy thay đổi dòng này
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy thông tin người dùng với email này.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
     }
 }

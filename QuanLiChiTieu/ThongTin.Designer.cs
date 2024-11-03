@@ -51,6 +51,7 @@ namespace QuanLiChiTieu
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btnThongtin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -123,7 +124,7 @@ namespace QuanLiChiTieu
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(84, 156);
+            this.label1.Location = new System.Drawing.Point(84, 200);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 6;
@@ -132,7 +133,7 @@ namespace QuanLiChiTieu
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(83, 205);
+            this.label2.Location = new System.Drawing.Point(83, 249);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 7;
@@ -141,7 +142,7 @@ namespace QuanLiChiTieu
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(84, 252);
+            this.label3.Location = new System.Drawing.Point(84, 296);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 13);
             this.label3.TabIndex = 8;
@@ -150,7 +151,7 @@ namespace QuanLiChiTieu
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(84, 297);
+            this.label4.Location = new System.Drawing.Point(84, 159);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(32, 13);
             this.label4.TabIndex = 9;
@@ -188,7 +189,7 @@ namespace QuanLiChiTieu
             // 
             this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.Controls.Add(this.txtHoTen);
-            this.panel2.Location = new System.Drawing.Point(152, 149);
+            this.panel2.Location = new System.Drawing.Point(152, 193);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(288, 24);
             this.panel2.TabIndex = 13;
@@ -197,7 +198,7 @@ namespace QuanLiChiTieu
             // 
             this.panel1.BackColor = System.Drawing.Color.LightGray;
             this.panel1.Controls.Add(this.txtGioiTinh);
-            this.panel1.Location = new System.Drawing.Point(152, 194);
+            this.panel1.Location = new System.Drawing.Point(152, 238);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(288, 24);
             this.panel1.TabIndex = 14;
@@ -206,7 +207,7 @@ namespace QuanLiChiTieu
             // 
             this.panel3.BackColor = System.Drawing.Color.LightGray;
             this.panel3.Controls.Add(this.txtEmail);
-            this.panel3.Location = new System.Drawing.Point(152, 286);
+            this.panel3.Location = new System.Drawing.Point(152, 148);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(288, 24);
             this.panel3.TabIndex = 16;
@@ -215,7 +216,7 @@ namespace QuanLiChiTieu
             // 
             this.panel4.BackColor = System.Drawing.Color.LightGray;
             this.panel4.Controls.Add(this.txtNgaySinh);
-            this.panel4.Location = new System.Drawing.Point(152, 241);
+            this.panel4.Location = new System.Drawing.Point(152, 285);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(288, 24);
             this.panel4.TabIndex = 15;
@@ -238,11 +239,22 @@ namespace QuanLiChiTieu
             this.panel6.Size = new System.Drawing.Size(288, 24);
             this.panel6.TabIndex = 15;
             // 
+            // btnThongtin
+            // 
+            this.btnThongtin.Location = new System.Drawing.Point(472, 378);
+            this.btnThongtin.Name = "btnThongtin";
+            this.btnThongtin.Size = new System.Drawing.Size(88, 23);
+            this.btnThongtin.TabIndex = 17;
+            this.btnThongtin.Text = "Hiện thông tin";
+            this.btnThongtin.UseVisualStyleBackColor = true;
+            this.btnThongtin.Click += new System.EventHandler(this.btnThongtin_Click);
+            // 
             // ThongTin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(598, 419);
+            this.Controls.Add(this.btnThongtin);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel6);
@@ -299,6 +311,6 @@ namespace QuanLiChiTieu
         private Panel panel4;
         private Panel panel5;
         private Panel panel6;
-
+        private Button btnThongtin;
     }
 }
